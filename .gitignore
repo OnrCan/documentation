@@ -9,9 +9,6 @@ Build/**
 # Node Modules Directory
 node_modules/**
 
-# Configuration Files
-Source/Configuration/Email.php
-
 # Sublime Text Files
 *.sublime-project
 *.sublime-workspace
