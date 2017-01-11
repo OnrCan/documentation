@@ -9,7 +9,7 @@ Build/**
 # Node Modules Directory
 node_modules/**
 
-# FTP Configuration File
+# Configuration Files
 Source/Configuration/Email.php
 
 # Sublime Text Files
