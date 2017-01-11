@@ -1,0 +1,17 @@
+# Git Ignore Files
+
+# Apple OSX Files
+.DS_Store
+
+# Build Directory
+Build/**
+
+# Node Modules Directory
+node_modules/**
+
+# FTP Configuration File
+Source/Configuration/Email.php
+
+# Sublime Text Files
+*.sublime-project
+*.sublime-workspace
