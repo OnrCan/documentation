@@ -2,7 +2,7 @@
 
 # Pyronome Help & Support Portal
 
-**Pyronome** is an online source code generator, that can be used any kind of software technology such as C++, Java, C#, PHP, Ruby, Perl, Python, XML, HTML, CSS, JavaScript and etc.
+**Pyronome** is an online source code generator, that can be used any kind of software technology such as C++, Java, C#, PHP, Node.js, Ruby, Perl, Python, XML, HTML, CSS, JavaScript and etc.
 
 For further information, please visit https://pyronome.com.
 
