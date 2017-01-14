@@ -1,12 +1,14 @@
-![Pyronome Help & Support Portal Public Repository](README.png "Pyronome Help & Support Portal Public Repository")
+![Pyronome Documentation Public Repository](README.png "Pyronome Documentation Public Repository")
 
-# Pyronome Help & Support Portal
+# Pyronome Documentation
 
 **Pyronome** is an online source code generator, that can be used any kind of software technology such as C++, Java, C#, PHP, Node.js, Ruby, Perl, Python, XML, HTML, CSS, JavaScript and etc.
 
 For further information, please visit https://pyronome.com.
 
-This repository contains the **Help & Support** portal source code of the Pyronome.
+This repository contains Pyronome **Documentation**.
+
+For Pyronome documentation, please visit https://pyronome.com/documentation.
 
 ## Getting Started
 
