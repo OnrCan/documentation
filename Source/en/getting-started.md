@@ -1,9 +1,9 @@
-1. Outline
-2. Tutorials
-3. Contact Support
-
-
 - Getting Started
+- Basics
+	- Introduction
+	- Motivation
+	- Brief History
+	- Zero Defect Software Concept
 - Projects
 	- Overview
 	- Pages
@@ -11,7 +11,7 @@
 	- Views
 	- Forms
 	- Settings
-	- Run & Deploy
+	- Run & Deploy Project
 	- Technologies
 - Tutorials
 - References
