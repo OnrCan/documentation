@@ -1,11 +1,11 @@
 {
-  "name": "help",
+  "name": "documentation",
   "version": "1.0.0",
-  "description": "Pyronome Help & Support Portal",
+  "description": "Pyronome Documentation",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pyronome/help.git"
+    "url": "git+https://github.com/pyronome/documentation.git"
   },
   "author": "",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "jpegtran-bin": "0.2.0"
   },
   "bugs": {
-    "url": "https://github.com/pyronome/help/issues"
+    "url": "https://github.com/pyronome/documentation/issues"
   },
-  "homepage": "https://github.com/pyronome/help#readme"
+  "homepage": "https://github.com/pyronome/documentation#readme"
 }
