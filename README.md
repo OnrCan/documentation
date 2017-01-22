@@ -66,7 +66,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please use the issue tracker to report any bugs/typos or requests.
+Please use the [issue tracker](https://github.com/pyronome/documentation/issues) to report any bugs/typos or requests.
 
 ## Versioning
 
