@@ -11,15 +11,142 @@
 	<meta name="author" content="Pyronome">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="../favicon.ico">
-	<base href="<?php echo $this->strBaseURL; ?>">
 	<style>
-	body {
-		font-size:15px;
-		font-weight: normal;
-		background-color:#263238;
-		margin:0px;
-		padding: 0px;
-		opacity: 0;
-	}
+		body {
+			font-size:15px;
+			font-weight: normal;
+			background-color:#263238;
+			margin:0px;
+			padding: 0px;
+			opacity: 0;
+		}
 	</style>
 </head>
+<body data-active-page-csv="" data-active-dialog-csv="">
+	<header class="z-depth-1">
+		<a class="aHeaderLogo notext" id="aHeaderLogo" href="//pyronome.com" target="_blank"></a>
+		<h1>Documentation</h1>
+	</header>
+	<div id="divPageContent" class="divPageContent" style="display: none;">
+		<div class="divContentWrapper">
+			<div class="divDialogContentContainer">
+				<div class="divContentPanel divDocumentation z-depth-1 white">
+					<h1>Introduction</h1>
+					<p>By reducing the time and cost of the solutions of real life problems, information technologies had a deep impact on the every little aspect of both our professional and daily lives. Especially with the urge of the internet era, this impact is drastically increasing as the solutions now became time-free and location-free.</p>
+					<p>One of the largest challenges of the IT field is the gap between the real world systems and their representations in the computer, or to be more specific today's online world. Numerous professionals proposed notations, languages and methods to provide solutions to narrow this gap. Most of those solutions are being used by many of the IT and related professionals today.</p>
+					<p>However, with the increasing shift of systems to the online world there still resides a need to have a representation tool to model and convert real life systems to the world of computers.</p>
+					<h2>Conformance</h2>
+					<p>This document is intended for developers, designers, system designers and modelers and other related professionals whose activities contain modeling of real life systems for computer technologies.</p>
+					<p>For better understanding of this document, the audience must have experience in the following:</p>
+					<ul>
+						<li>
+							<p>Object oriented system modeling</p>
+						</li>
+						<li>
+							<p>Computer programming languages</p>
+						</li>
+					</ul>
+					<h2>Credits and Acknowledgement</h2>
+					<p>The authors thank Sanpark IT &amp; Design Co. Ltd., for maintaining the professional environment and encouragement that resulted and catalyzed the development of Modo. They also thank Recep Kütük from Sanpark for the Modo identity and the document formatting.</p>
+					<p>Modo language is shaped by the ideas, practice and experience of Aykut Aydınlı and the Sanpark crew; starting from 2005. The latest version of Modo is shaped by Aykut Aydınlı and Doruk Eker.</p>
+					<p>This document is authored and edited by Aykut Aydınlı and Doruk Eker.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="divSearchContent" class="divDialogContent" style="display: none;">
+		<div class="divContentWrapper">
+			<div class="divDialogContentContainer">
+				<div class="divContentPanel divDocumentation divDocumentationSearch">
+					<nav class="navSearch">
+						<div class="nav-wrapper">
+							<form>
+								<div class="input-field">
+									<input id="strSearchProject" name="strSearchProject" class="notransition white-text" type="search" placeholder="Search Documentation">
+									<label for="strSearchProject"><i class="white-text material-icons ion-android-search"></i></label>
+								</div>
+							</form>
+						</div>
+					</nav>
+					<div id="divTableOfContents" class="divTableOfContents">
+						<h2>TABLE OF CONTENTS</h2>
+						<ul id="ulTableOfContents" class="ulTableOfContents first">
+							<li><a href="#" class="active"><i class=""></i> Getting Started</a></li>
+							<li>
+								<a href="#">Basics</a>
+								<ul class="ulTableOfContents">
+									<li><a href="#"><i class=""></i> Introduction</a></li>
+									<li><a href="#"><i class=""></i> Motivation</a></li>
+									<li><a href="#"><i class=""></i> Brief History</a></li>
+									<li><a href="#"><i class=""></i> Zero Defect Software Concept</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul class="ulTableOfContents">
+									<li><a href="#">Overview</a></li>
+									<li><a href="#">Pages</a></li>
+									<li><a href="#">Classes</a></li>
+									<li><a href="#">Views</a></li>
+									<li><a href="#">Forms</a></li>
+									<li><a href="#">Settings</a></li>
+									<li><a href="#">Run &amp; Deploy Project</a></li>
+									<li><a href="#">Technologies</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Tutorials</a></li>
+							<li><a href="#">References</a></li>
+							<li><a href="#">Specifications</a></li>
+							<li>
+								<a href="#">Legal</a>
+								<ul class="ulTableOfContents">
+									<li><a href="#">Terms of Use</a></li>
+									<li><a href="#">User Agreement</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Glossary</a></li>
+						</ul>
+					</div>
+					<div id="divSearchResults" style="display: none;">
+						<h2>SEARCH RESULTS</h2>
+						<ul id="ulSearchResults" class="ulSearchResults">
+							<li>
+								
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		<button id="buttonShowSearch" class="notransition btn-floating waves-effect waves-light btn-large amber darken-4">
+			<i class="ion-android-search"></i>
+		</button>
+		<button id="buttonShowContent" class="notransition btn-floating waves-effect waves-light btn-large amber darken-4" style="display: none;">
+			<i class="ion-ios-book"></i>
+		</button>
+	</div>
+	<script type="text/javascript">
+		function lazyCSS(url){if(document.createStyleSheet){document.createStyleSheet(url);}else{var c=document.createElement('link');c.href=url;c.rel="stylesheet";c.type="text/css";document.getElementsByTagName("head")[0].appendChild(c);}}
+		function lazyJS(url,success){var s=document.createElement('script');s.src=url;var h=document.getElementsByTagName('head')[0],d=false;s.onload=s.onreadystatechange = function(){if (!d&&(!this.readyState||this.readyState=="loaded"||this.readyState=="complete")){d=true;if(success){success();}s.onload=s.onreadystatechange = null;h.removeChild(s);}};h.appendChild(s);}
+		if(window.addEventListener){window.addEventListener("load",lazyPage,false);}else if(window.attachEvent){window.attachEvent("onload",lazyPage);}else{window.onload=lazyPage;}
+		function lazyPage() {
+			lazyCSS("../css/global.css");
+			lazyCSS("../css/local.css");
+			lazyJS("../js/global.js",function(){
+				lazyJS("../js/index.js");
+			});
+		}
+	</script>
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-56258154-1', 'auto');
+	ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -264,3 +264,179 @@ function sortTable(elTable, bDESC) {
 		$(elTable).append(arrRows[i]);	
 	}
 }
+function showPage(strDIVID) {
+	var elDIV = document.getElementById(strDIVID);
+
+	if (!elDIV) {
+		return;
+	}
+
+	if (document.getElementById("h3PageHeader")) {
+		var strPageHeader = elDIV.getAttribute("data-page-header");
+		document.getElementById("h3PageHeader").innerHTML = strPageHeader;
+	}
+
+	$(elDIV).addClass("divPageActive");
+
+	elDIV.style.display = "block";
+	$(".divContentWrapper", elDIV).css("display", "block");
+	// $(".divContentPanel", elDIV).css("display", "none");
+
+	appendActivePage(strDIVID);
+
+	$(elDIV).velocity("stop");
+	$(".divContentWrapper", elDIV).velocity("transition.slideUpBigIn", 300);
+
+	elDIV.scrollTop = "0px";
+
+	$(".buttonClosePage", elDIV).off("click").on("click", function() {
+		hidePage(strDIVID);
+	});
+}
+function appendActivePage(strDIVID) {
+	var strActivePageCSV = document.body.getAttribute("data-active-page-csv");
+	if (strActivePageCSV != "") {
+		strActivePageCSV += ",";
+	}
+	strActivePageCSV += strDIVID;
+	document.body.setAttribute("data-active-page-csv", strActivePageCSV);
+}
+function setActivePage(strDIVID) {
+	document.body.setAttribute("data-active-page-csv", strDIVID);
+}
+function hidePage(strDIVID) {
+	var elDIV = document.getElementById(strDIVID);
+
+	if (!elDIV) {
+		return;
+	}
+
+	if ("1" == document.body.getAttribute("data-hiding-page")) {
+		return;
+	}
+
+	document.body.setAttribute("data-hiding-page", "1");
+
+	elDIV.style.display = "none";
+	$(".divContentWrapper", elDIV).css("display", "none");
+
+	var strActivePageCSV = document.body.getAttribute("data-active-page-csv");
+	arrActivePages = strActivePageCSV.split(",");
+	arrActivePages.pop();
+	strActivePageCSV = arrActivePages.join(",");
+	document.body.setAttribute("data-active-page-csv", strActivePageCSV);
+
+	$(".buttonClosePage", elDIV).off("click");
+	elDIV.scrollTop = "0px";
+	$(elDIV).removeClass("divPageActive");
+
+	$(elDIV).velocity("stop");
+	$(".divContentWrapper", elDIV).velocity("transition.slideDownBigOut", 300, function () {
+		elDIV.style.display = "none";
+		document.body.setAttribute("data-hiding-page", "0");
+	});
+}
+function showDialog(strDIVID, strGUID) {
+	var elDIV = document.getElementById(strDIVID);
+
+	if (!elDIV) {
+		return;
+	}
+
+	if (-1 == elDIV.className.indexOf("divPageDialog")) {
+		$(document.body).addClass("bodyDialogActive");
+	}
+	
+	$(elDIV).addClass("divDialogActive");
+
+	elDIV.style.display = "block";
+	$(".divContentWrapper", elDIV).css("display", "block");
+	// $(".divContentPanel", elDIV).css("display", "none");
+
+	var strPageName = document.body.getAttribute("data-page-name");
+	appendActiveDialog(strDIVID);
+
+	$(elDIV).velocity("stop");
+	$(".divContentWrapper", elDIV).velocity("transition.slideUpBigIn", 300, function () {
+		$(".inputFirstFocus", elDIV).focus();
+	});
+
+	elDIV.scrollTop = "0px";
+
+	$(".divFloatingActionButton", elDIV).css("display", "block");
+
+	$(".buttonClose", elDIV).off("click").on("click", function() {
+		hideDialog(strDIVID);
+	});
+}
+function appendActiveDialog(strDIVID) {
+	var strActiveDialogCSV = document.body.getAttribute("data-active-dialog-csv");
+	if (strActiveDialogCSV != "") {
+		strActiveDialogCSV += ",";
+	}
+	strActiveDialogCSV += strDIVID;
+	document.body.setAttribute("data-active-dialog-csv", strActiveDialogCSV);
+}
+function setActiveDialog(strDIVID) {
+	document.body.setAttribute("data-active-dialog-csv", strDIVID);
+}
+function hideDialog(strDIVID) {
+	var elDIV = document.getElementById(strDIVID);
+	var arrMessageDialogs = ["divErrorDialog","divDeleteConfirmation"];
+	var bMessageDialog = (-1 != arrMessageDialogs.indexOf(strDIVID));
+
+	if (!elDIV) {
+		return;
+	}
+
+	if ("1" == document.body.getAttribute("data-hiding-dialog")) {
+		return;
+	}
+
+	document.body.setAttribute("data-hiding-dialog", "1");
+
+	var strActiveDialogCSV = document.body.getAttribute("data-active-dialog-csv");
+	arrActiveDialogs = strActiveDialogCSV.split(",");
+	arrActiveDialogs.pop();
+	strActiveDialogCSV = arrActiveDialogs.join(",");
+	document.body.setAttribute("data-active-dialog-csv", strActiveDialogCSV);
+
+	var strPageName = document.body.getAttribute("data-page-name");
+	if ("project" == strPageName) {
+		if (!bMessageDialog) {
+			var strActiveGUIDCSV = document.body.getAttribute("data-active-guid-csv");
+			arrActiveGUIDs = strActiveGUIDCSV.split(",");
+			arrActiveGUIDs.pop();
+			strActiveGUIDCSV = arrActiveGUIDs.join(",");
+			document.body.setAttribute("data-active-guid-csv", strActiveGUIDCSV);
+
+			var strActiveClassCSV = document.body.getAttribute("data-active-class-csv");
+			arrActiveClasses = strActiveClassCSV.split(",");
+			arrActiveClasses.pop();
+			strActiveClassCSV = arrActiveClasses.join(",");
+			document.body.setAttribute("data-active-class-csv", strActiveClassCSV);
+		}
+	}
+
+	if (arrActiveDialogs.length < 2) {
+		$(document.body).removeClass("bodyDialogActive");
+	}
+
+	$(elDIV).removeClass("divDialogActive");
+
+	$(elDIV).velocity("stop");
+	$(".divContentWrapper", elDIV).velocity("transition.slideDownBigOut", 300, function () {
+		elDIV.style.display = "none";
+		document.body.setAttribute("data-hiding-dialog", "0");
+	});
+}
+function hideDialogs() {
+	var arrDialogContentDIV = $(".divDialogContent");
+	var lDialogContentDIVCount = arrDialogContentDIV.length;
+	var elDialogContentDIV = null;
+
+	for (var i = 0; i < lDialogContentDIVCount; i++) {
+		elDialogContentDIV = arrDialogContentDIV[i];
+		hideDialog(elDialogContentDIV.id);
+	}
+}
