@@ -64,6 +64,10 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
+## Contributing
+
+Please use the issue tracker to report any bugs/typos or requests.
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/pyronome/help/tags). 
