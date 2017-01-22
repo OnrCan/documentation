@@ -22,7 +22,7 @@ Firstly, install documentation project dependencies:
 $ npm install
 ```
 
-For building documentation search index and generating html code of the documentation and copying required files:
+For building documentation search index, generating html code of the documentation and copying required files:
 
 ```
 $ grunt build
