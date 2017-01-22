@@ -25,11 +25,8 @@ $ npm install
 For building documentation search index and generating html code of the documentation and copying required files:
 
 ```
-$ grunt build 
-
+$ grunt build
 ```
-
-```$ grunt build``` builds documentation search index and generates documentation html code.
 
 And then,
 
@@ -37,13 +34,7 @@ And then,
 $ grunt publish
 ```
 
-```$ grunt publish``` copies required files in the public html directory.
-
-or
-
-```
-$ grunt build && grunt publish
-```
+```$ grunt build``` builds documentation search index and generates documentation html code. ```$ grunt publish``` copies required files in the public html directory.
 
 ## Contributing
 
