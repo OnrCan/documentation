@@ -1,6 +1,6 @@
 # Projects
 ## 1. Adding a New Project
-When you log into your account, you'll see your existing projects.
+> When you log into your account, you'll see your existing projects.
 
  - To add a new project, you can click on <strong>the add button at bottom right</strong> of the screen.
 
