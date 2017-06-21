@@ -3,5 +3,4 @@
 <p>When you log into your account, you'll see your existing projects.</p>
 <p>To add a new project, you can click on <strong>the add button at bottom right</strong> of the screen.</p>
 <p>Or you can click on <strong>plus icon at top right</strong> of the Project Table.</p>
-![Pyronome Workspace - Projects]
-(https://image.ibb.co/dtk2v5/Workspace_1_001.png)
+![Pyronome Workspace - Projects](https://github.com/OnrCan/documentation/blob/patch-1/Source/documentation/img/Workspace%201_001.png)
