@@ -1,15 +1,15 @@
-# Pages:
+# Classes:
  ###### In this section, you create the project's classes and set its properties.
 
-##### *Switch*
-   - Set the class status. If you want the class exists but not be generated, set the switch __disabled__.
-##### *Class Name*
-   - Specify a __unique name__ for the class.
-##### *Class Collection Name*
-   - Specify a *__unique collection name__* for the class. It refers a wrapper for all objects of that class.
-##### *Class Properties*
-   - Set class properties. `ID , Deleted , CreationDate and LastUpdate` properties are given by default.
-      - ###### *Create new class property:*
+#### Switch
+    Set the class status. If you want the class exists but not be generated, set the switch __disabled__.
+#### Class Name
+    Specify a __unique name__ for the class.
+#### Class Collection Name
+    Specify a *__unique collection name__* for the class. It refers a wrapper for all objects of that class.
+#### Class Properties
+    Set class properties. `ID , Deleted , CreationDate and LastUpdate` properties are given by default.
+   - ###### *Create new class property:*
           - | Property | Definiton and Usage |
             | --- | --- |
             | *First Switch* | Set the property status. If you want the property exists but not be generated, set the switch __disabled__. |
