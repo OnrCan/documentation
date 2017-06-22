@@ -21,6 +21,3 @@
  - Specify a title for the project. It will be shown in your projects list.
 
 ![Pyronome Workspace - Project Setup](https://github.com/OnrCan/documentation/blob/patch-1/Source/documentation/img/Selection_011.png)
-
-## 2. Project Management
-###### Creating and editing project's components
