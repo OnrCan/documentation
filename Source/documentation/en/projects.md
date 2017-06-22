@@ -31,4 +31,7 @@
    - Set the page's status. If you want the page is exist but not generated, set the switch __disabled__.
   ##### *Page Name*
    - Specify a __unique name__.
-  ##### **
+  ##### *Page Type*
+   - Choose the page type.*(Login, Signup or Private etc.)*
+  ##### *Default Page Option*
+   - You can set the page as __the Default Page__.*(Homepage or Dashboard)*
