@@ -27,6 +27,11 @@
              | *Create New State* | ??? |
              | *Create New Notification* | ??? |
    
-Click on __SAVE PROPERTY__ button to create the property.
+           - Click on __SAVE PROPERTY__ button to create the property.
 
-![Pyronome Workspace - Class Property](https://raw.githubusercontent.com/OnrCan/documentation/d6638379795bbaa76e30cc71c4af951a342a761b/Source/documentation/img/pyronome-workspace-classProperty.png)
+           ![Pyronome Workspace - Class Property](https://raw.githubusercontent.com/OnrCan/documentation/d6638379795bbaa76e30cc71c4af951a342a761b/Source/documentation/img/pyronome-workspace-classProperty.png)
+           
+#### Table Columns
+   - Create table columns you want to be shown in admin panel(__Sprit panel'i kastediyorum. Değişecek!__).
+#### Events
+   - Create events and its properties. You can consider __Events__ same as triggers.
