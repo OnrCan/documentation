@@ -35,5 +35,6 @@
    - Create table columns you want to be shown in admin panel(__Sprit panel'i kastediyorum. Değişecek!__).
 #### Events
    - Create events and its properties. You can consider __Events__ same as triggers.
+   
 Click on __SAVE CLASS__ button to create the class
 ![Pyronome Workspace - Creating Class](https://github.com/OnrCan/documentation/blob/patch-1/Source/documentation/img/pyronome-workspace-classCreate.png)
