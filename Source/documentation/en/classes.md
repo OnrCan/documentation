@@ -2,7 +2,7 @@
  ###### In this section, you can create the project's classes and set its properties easily.
 
 #### Class Name
-  To find and modify the class you create in the classes list easily, you have to specify a unique name.
+  To find and modify the class in the classes list easily, you have to specify a __unique name__.
 
 #### Class Collection Name
   Pyronome creates a container for each class you have. Thus, when you want to modify anything applied on all objects of a class, you just need to use its __Collection Name__.
